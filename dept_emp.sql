@@ -1,3 +1,4 @@
+use employees;
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS full_name, d.dept_name
 FROM employees as e
   JOIN dept_emp as de
@@ -7,4 +8,4 @@ FROM employees as e
 WHERE de.to_date = '9999-01-01';
 #       AND e.emp_no = 10001;
 
-select * from employees;
+

@@ -33,5 +33,5 @@ SELECT * From users;
 
 select roles.name as role_name, count (users.name) as "folks with this role"
 from users
-right join roles on user.role_id = roles.id
+right join roles on users.role_id = roles.id
 group by roles.name order by "folks with this role";
