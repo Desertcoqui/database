@@ -30,3 +30,8 @@ INSERT INTO users (name, email, role_id) VALUES
 
 Select * From roles;
 SELECT * From users;
+
+select roles.name as role_name, count (users.name) as "folks with this role"
+from users
+right join roles on user.role_id = roles.id
+group by roles.name order by "folks with this role";
